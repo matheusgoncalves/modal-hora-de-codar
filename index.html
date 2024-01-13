@@ -7,28 +7,30 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
+
   <body>
     <h1>JavaScript Modal</h1>
     <button id="open-modal">Abrir</button>
-    <div id="fade" class="hide"></div>
-    <div id="modal" class="hide">
-      <div class="modal-header">
-        <h2>Este é o Modal</h2>
-        <button id="close-modal">Fechar</button>
+    <dialog>
+      <div id="modal">
+        <div class="modal-header">
+          <h2>Este é o Modal</h2>
+          <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            cumque sequi et officiis beatae! Ex perspiciatis esse suscipit eaque
+            cupiditate rem sunt voluptas, iusto magni unde veniam dolor ab odio!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            tempora nostrum tempore accusamus rerum accusantium repudiandae
+            mollitia ducimus tenetur corporis? Non veritatis repellat
+            exercitationem accusantium provident iusto, cumque veniam id?
+          </p>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cumque
-          sequi et officiis beatae! Ex perspiciatis esse suscipit eaque
-          cupiditate rem sunt voluptas, iusto magni unde veniam dolor ab odio!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-          tempora nostrum tempore accusamus rerum accusantium repudiandae
-          mollitia ducimus tenetur corporis? Non veritatis repellat
-          exercitationem accusantium provident iusto, cumque veniam id?
-        </p>
-      </div>
-    </div>
+    </dialog>
   </body>
 </html>
