@@ -28,49 +28,63 @@ button {
 }
 
 #open-modal {
-    background-color: #007eff;
-  }
-  
-  button:hover {
-    opacity: 1;
-  }
-  
-  #fade {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 5; /* Para ficar na frente do modal */
-  }
-  
-  #modal {
-      position: fixed; 
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%); /* Centralizar */
-      background-color: #fff;
-      z-index: 10;
-      max-width: 90%;
-      padding: 1rem;
-      border-radius: 0.5rem;
-  }
-  
-  .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-  }
-  
-  .modal-body p {
-      margin-bottom: 1rem;
-  }
+  background-color: #007eff;
+}
 
-  #modal.hide,
-  #fade.hide {
-    opacity: 0; /* Esconder, não foi utilizado display: none; para poder fazer a animação */
-  }
+button:hover {
+  opacity: 1;
+}
+
+/* Fade */
+#fade,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all; /* Para poder clicar nos elementos dentro do modal */
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5; /* Para ficar na frente do modal */
+}
+
+/* Modal */
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centralizar */
+  background-color: #fff;
+  z-index: 10;
+  max-width: 90%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0; /* Esconder, não foi utilizado display: none; para poder fazer a animação */
+  pointer-events: none; /* Para não poder clicar nos elementos dentro do modal */
+}
+
+#modal.hide {
+    top: 0;
+}
